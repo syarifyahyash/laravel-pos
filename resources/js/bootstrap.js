@@ -13,11 +13,25 @@ window.Swal = Swal;
 import Popper from 'popper.js';
 window.Popper = Popper;
 
-import jQuery from 'jquery';
-window.$ = window.jQuery = jQuery;
 
+// Import jQuery and assign it globally
+import $ from 'jquery';
+window.$ = window.jQuery = $;
+
+// Import DataTables and initialize it correctly
 import DataTable from 'datatables.net-bs4';
-DataTable(window, window.$);
+
+// Ensure that the DataTables plugin is initialized only after the document is ready
+$(document).ready(function() {
+    // Initialize DataTables
+    $('#table').DataTable();
+});
+
+// import jQuery from 'jquery';
+// window.$ = window.jQuery = jQuery;
+
+// import DataTable from 'datatables.net-bs4';
+// DataTable(window, window.$);
 
 import 'bootstrap';
 import 'admin-lte';
