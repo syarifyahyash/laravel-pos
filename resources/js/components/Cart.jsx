@@ -345,7 +345,8 @@ class Cart extends Component {
                                 key={p.id}
                                 className="item"
                             >
-                                <img src={p.image_url} alt="" />
+                                {/* <img src={p.image_url} alt="" /> */}
+                                <img src={`${p.image_url}`} alt={p.name} />
                                 <h5
                                     style={
                                         window.APP.warning_quantity > p.quantity
